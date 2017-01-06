@@ -1,2 +1,2 @@
 # wave
-Set your desktop picture to a new unsplash photo everyday. No dependencies.
+Set your desktop picture to a new unsplash photo everyday. No dependencies. Works on Windows, Linux, and macOS.
