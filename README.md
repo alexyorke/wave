@@ -21,7 +21,11 @@ optional arguments:
                        effect if using png format.
 ```
 
-Example: `python wave.py --format jpg --quality=100 --category nature --path ~/Pictures/unsplash.jpg` (will set desktop picture to a random nature photo, in jpg, with the quality of 100)
+Examples:
+
+`python wave.py --path ~/Pictures/unsplash.jpg` (sets desktop to random unsplash wallpaper in jpg format with quality 80)
+
+`python wave.py --format jpg --quality=100 --category nature --path ~/Pictures/unsplash.jpg` (will set desktop picture to a random nature photo, in jpg, with the quality of 100)
 
 
 ## Credits
