@@ -1,5 +1,5 @@
 # wave
-Set your desktop picture to a new unsplash photo everyday. No dependencies, except for python. Works on Windows, Linux, and macOS.
+Set your desktop picture to a new [unsplash](https://unsplash.com/) photo everyday. No dependencies, except for python. Works on Windows, Linux, and macOS.
 
 ![unsplash](https://source.unsplash.com/category/nature/900x400)
 
