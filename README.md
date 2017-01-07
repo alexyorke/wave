@@ -1,7 +1,7 @@
 # wave
 Set your desktop picture to a new unsplash photo everyday. No dependencies, except for python. Works on Windows, Linux, and macOS.
 
-![unsplash landscape](https://images.unsplash.com/photo-1452825152636-89e0f09f1267?dpr=1&auto=format&fit=crop&w=900&h=400&q=80&cs=tinysrgb&crop=)
+![unsplash](https://source.unsplash.com/category/nature/900x400)
 
 ## Usage
 
