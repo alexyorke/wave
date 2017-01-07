@@ -3,9 +3,6 @@ import urllib2
 import argparse
 from sys import platform
 
-# http://stackoverflow.com/questions/3375740/get-screen-size-in-python
-
-
 def getScreenSize():
     import gtk
     import pygtk
