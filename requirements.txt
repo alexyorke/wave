@@ -1,0 +1,2 @@
+Quartz==0.0.1.dev0
+pygtk==2.24.2
