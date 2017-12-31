@@ -24,11 +24,11 @@ def getScreenSize():
 def setWallpaper(path):
     if platform.startswith("linux"):
         import commands
-        command = "gconftool-2 --set /desktop/gnome/background/" +
+        command = "gconftool-2 --set /desktop/gnome/background/" + \
         "picture_filename --type string '" + path + "'"
         status, output = commands.getstatusoutput(command)
 
-        unityCommand = "gsettings set org.gnome.desktop.background " +
+        unityCommand = "gsettings set org.gnome.desktop.background " + \
         "picture-uri file://" + path
         statusUnity, outputUnity = commands.getstatusoutput(unityCommand)
         if status is not 0 and statusUnity is not 0:
@@ -36,24 +36,24 @@ def setWallpaper(path):
     elif platform == "win32":
             import ctypes
             SPI_SETDESKWALLPAPER = 20
-            ctypes.windll.user32
+            ctypes.windll.user32 \
             .SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, path, 0)
     else:
-        print "Error: can't set wallpaper for " +
+        print "Error: can't set wallpaper for " + \
         platform + ". Will be implemented soon."
 
 # get the command-line arguments
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--length', type=int,
-                    help='the length of the picture in pixels. ' +
+                    help='the length of the picture in pixels. ' + \
                     'Defaults to desktop size.')
 parser.add_argument('--height', type=int,
-                    help='the height of the picture in pixels. ' +
+                    help='the height of the picture in pixels. ' + \
                     'Defaults to desktop size.')
 
 parser.add_argument('--path', type=str,
-                    help='path to the temp location to save the ' +
+                    help='path to the temp location to save the ' + \
                     'unsplash photo', required=True)
 
 parser.add_argument('--category', type=str,
@@ -61,11 +61,11 @@ parser.add_argument('--category', type=str,
                     required=False)
 
 parser.add_argument('--format', type=str,
-                    help='the format the photo should be downloaded' +
+                    help='the format the photo should be downloaded' + \
                     ' in (png or jpg)',
                     required=False)
 parser.add_argument('--quality', type=int,
-                    help='the quality of the jpg file (from 0 to 100.)' +
+                    help='the quality of the jpg file (from 0 to 100.)' + \
                     'This has no effect if using png format.',
                     required=False)
 
@@ -112,14 +112,14 @@ if quality > 100 or quality < 0:
     exit()
 
 # download photo
-url = "https://source.unsplash.com/" + str(picLength) +
+url = "https://source.unsplash.com/" + str(picLength) + \
 "x" + str(picHeight) + "/?" + str(category)
 
 var = urllib2.urlopen(url)
 url_string = var.geturl()
 
 # this seems to be the url for the 404 error page
-if url_string.startswith("https://images.unsplash.com/" +
+if url_string.startswith("https://images.unsplash.com/" + \
                          "photo-1446704477871-62a4972035cd"):
     print "Error: no photos found."
     exit()
